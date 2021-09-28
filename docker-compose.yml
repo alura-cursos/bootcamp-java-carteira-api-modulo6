@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  carteira_database:
+    image: mysql:8.0
+    restart: always
+    expose:
+      - 3306
+    env_file:
+      - carteira_database.env
+
+  carteira_app:
+    image: alura/carteira-api
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on: 
+      - carteira_database
+    env_file:
+      - carteira_app.env
