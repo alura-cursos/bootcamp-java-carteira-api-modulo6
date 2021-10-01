@@ -25,4 +25,12 @@ jobs:
       
       - name: Executar os testes
         run: mvn clean test --file pom.xml
+      
+      - name: Deploy no heroku 
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "alura-carteira-api"
+          heroku_email: "r.caneppele@gmail.com"
+          usedocker: true
 
