@@ -27,6 +27,7 @@ jobs:
         run: mvn clean test --file pom.xml
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
