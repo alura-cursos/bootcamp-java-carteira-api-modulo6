@@ -71,7 +71,7 @@ class UsuarioControllerTest {
 	
 	@Test
 	void deveriaCadastrarUsuarioComDadosCompletos() throws Exception {
-		String json = "{\"nome\":\"fulano\",\"login\":\"fulano@email.com\",\"perfilId\":1}";
+		String json = "{\"nome\":\"fulano\",\"login\":\"fulano@email.com\",\"perfilId\":1,\"email\":\"fulano@email.com\"}";
 		String jsonEsperado = "{\"nome\":\"fulano\",\"login\":\"fulano@email.com\"}";
 		
 		mvc
